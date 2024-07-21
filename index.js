@@ -126,6 +126,89 @@ console.log(calAvg([1, 2, 3, 4, 5]));
 
 /********************************************************************************/
 
-/*10)
+/*10)equal array same elements same order*/
 
-*/
+const arrayEqual = (arr1, arr2) => {
+  if (arr1.length !== arr2.length) return false;
+  return arr1.every((val, index) => val === arr2[index]);
+};
+
+console.log(arrayEqual([1, 8, 3], [1, 2, 3]));
+
+/********************************************************************************/
+
+/*11)take no as input and return sum of digit*/
+
+const sumOfDigits = (num) => {
+  let arr = Array.from(String(num), Number);
+  return arr.reduce((accum, curval) => (accum += curval), 0);
+};
+
+console.log(sumOfDigits(123));
+
+/********************************************************************************/
+
+/*12)take arr of int as input and removes duplicate elements*/
+
+const duplicate = (arr) => {
+  let newArr = [...new Set(arr)];
+  return newArr;
+};
+
+console.log(duplicate([1, 2, 2, 3, 3, 4, 4, 4, 4, 5, 6]));
+
+/********************************************************************************/
+
+/*13)return count of vowels in string*/
+
+const countVowels = (str) => {
+  let vowels = ["a", "e", "i", "o", "u"];
+  let arr = str.split("");
+  let count = 0;
+  for (let char of arr) {
+    if (vowels.includes(char.toLowerCase())) {
+      count++;
+    }
+  }
+  return count;
+};
+
+console.log(countVowels("this is a quick brown fox"));
+
+/********************************************************************************/
+
+/*14)take int as input and return true if num is power of two*/
+
+const power = (num) => {
+  let op = false;
+  for (let i = 1; i < num; i++) {
+    if (2 ** i === num) op = true;
+  }
+  return op;
+};
+
+console.log(power(32));
+
+/********************************************************************************/
+
+/*15)return sum of square of elements of array*/
+
+const sum = (arr) => {
+  return arr.reduce((accum, curElem) => (accum = accum + curElem * curElem), 0);
+  /* let sum = 0
+  for(let elem of arr){
+  sum = sum + elem*elem}
+  */
+};
+
+console.log(sum([1, 2, 3]));
+
+/********************************************************************************/
+
+/*16)find min val in arr*/
+
+const min = (arr) => {
+  return Math.min(...arr);
+};
+
+console.log(min([1, 2, 3, 4, -5, 6, 7]));
