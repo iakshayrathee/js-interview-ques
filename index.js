@@ -212,3 +212,43 @@ const min = (arr) => {
 };
 
 console.log(min([1, 2, 3, 4, -5, 6, 7]));
+
+/********************************************************************************/
+
+/*17)convert string to camel case and snake case*/
+
+const toCamelCase = (str) => {
+  str = str.trim().split(" ");
+  str = str.map((val, index) => {
+    if (index === 0) return val.toLowerCase();
+    else {
+      return val.charAt(0).toUpperCase() + val.slice(1).toLowerCase();
+    }
+  });
+  return str.join("");
+};
+
+console.log(toCamelCase("Hello world js interview ques"));
+
+/********************************************************************************/
+
+/*18)check small letter or capital letter*/
+
+const isUpperCase = (char) => {
+  // if (char.charCodeAt(0) >= 65 && char.charCodeAt(0) <= 90) return true;
+
+  // return false;
+  return char === char.toUpperCase();
+};
+console.log(isUpperCase("s"));
+
+/********************************************************************************/
+
+/*19)str start with specific substr*/
+
+const startsWith = (str, substr) => {
+  // return str.toLowerCase().startsWith(substr.toLowerCase());
+  return str.toLowerCase().slice(0, substr.length) === substr.toLowerCase();
+};
+
+console.log(startsWith("Hello, world", "hello"));
