@@ -50,3 +50,19 @@ function reverseNo(num) {
   return rev;
 }
 console.log(reverseNo(12053));
+
+/* palindrome or not */
+
+function palindrome(str) {
+  var reversed = str.split("").reverse().join("");
+  return reversed === str;
+}
+
+console.log(palindrome("racecar"));
+
+/* return passed str with letters in alphabetical order */
+
+function stringAlpha(str) {
+  return str.split("").sort().join("");
+}
+console.log(stringAlpha("akshay"));
