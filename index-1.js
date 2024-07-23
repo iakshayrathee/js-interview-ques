@@ -66,3 +66,37 @@ function stringAlpha(str) {
   return str.split("").sort().join("");
 }
 console.log(stringAlpha("akshay"));
+
+/* convert first word capital in str */
+
+function capitalize(str) {
+  var ans = str.split(" ").map((word) => {
+    return word.charAt(0).toUpperCase() + word.substring(1);
+  });
+  return ans.join(" ");
+}
+
+console.log(capitalize("hello every one this is a ques"));
+
+/* get no of occurance */
+
+function occurance(str) {
+  var occurances = {};
+  str.split("").forEach(function (element) {
+    if (occurances.hasOwnProperty(element) === false) {
+      occurances[element] = 1;
+    } else occurances[element]++;
+  });
+  return occurances;
+}
+console.log(occurance("hello"));
+
+/*loop an array and add members of it */
+
+var arr = [1, 2, 3, 4, 5, 6, 7, 8];
+var sum = 0;
+arr.forEach(function (elem) {
+  sum = sum + elem;
+});
+
+console.log(sum);
