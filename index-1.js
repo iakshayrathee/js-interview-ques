@@ -198,3 +198,26 @@ function freq(arr) {
   console.log(ans);
 }
 freq([1, 1, 1, 1, 2, 2, 2, 4, 4, 5, 5, 6, 7, 7, 8, 8]);
+
+/*shuffle an array */
+
+function shuffle(arr) {
+  var totalShuffleArea = arr.length;
+  while (totalShuffleArea > 0) {
+    totalShuffleArea--;
+    var indexReq = Math.floor(Math.random() * totalShuffleArea);
+    var temp = arr[totalShuffleArea];
+    arr[totalShuffleArea] = arr[indexReq];
+    arr[indexReq] = temp;
+  }
+  return arr;
+}
+console.log(shuffle([1, 2, 3, 4, 5, 6, 7, 8]));
+
+/* compute union of two arrays*/
+
+function union(arr1, arr2) {
+  return [...new Set(arr1.concat(arr2))];
+}
+
+console.log(union([1, 2, 3, 4, 5, 6], [4, 5, 6, 7, 8, 9]));
