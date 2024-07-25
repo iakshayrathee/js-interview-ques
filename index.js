@@ -252,3 +252,17 @@ const startsWith = (str, substr) => {
 };
 
 console.log(startsWith("Hello, world", "hello"));
+
+/********************************************************************************/
+
+/*20)reverse str without using built in methods*/
+
+const reverseString = (str) => {
+  let reverse = " ";
+  for (let i = str.length - 1; i >= 0; i--) {
+    reverse += str[i];
+  }
+  return reverse;
+};
+
+console.log(reverseString("Hello"));
